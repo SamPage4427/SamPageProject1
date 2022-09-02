@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "4e00ee2a-8469-45ff-b557-7118ec9669e8",
+		"name": "FoundationsProject1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22995684"
+	},
+	"item": [
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "basic"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SPage4427\",\r\n    \"password\": \"Ravens\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/employee?auth=login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"Bob\",\r\n    \"lastname\": \"Nowlin\",\r\n    \"username\": \"BNowlin96\",\r\n    \"password\": \"Security187\",\r\n    \"position\": \"Security\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/employee?auth=register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "register"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/employee?auth=employee_table",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"employee"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "employee_table"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Management",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"REiffe\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/management?auth=login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"management"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "login"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/management?auth=employee_table",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"management"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "employee_table"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tickets",
+			"item": [
+				{
+					"name": "Create Tickets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SPage4427\",\r\n    \"amount\": 100,\r\n    \"description\": \"Office Supplies\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/reimburse?auth=create",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"reimburse"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "create"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pending Tickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"SPage4427\",\r\n    \"status\": \"pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/reimburse?auth=pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"reimburse"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "pending"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approved tickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ERuigu87\",\r\n    \"status\": \"approved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/reimburse?auth=approved",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"reimburse"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "approved"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Denied Tickets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"DNapier97\",\r\n    \"status\": \"denied\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/reimburse?auth=denied",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"reimburse"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "denied"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Tickets",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ticketid\": 8,\r\n    \"status\": \"Approved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/FoundationsProject1/reimburse?auth=update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"FoundationsProject1",
+								"reimburse"
+							],
+							"query": [
+								{
+									"key": "auth",
+									"value": "update"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
