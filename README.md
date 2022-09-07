@@ -20,9 +20,7 @@ Includes screenshots of the code used in Postman and the original exported files
 
 ## Technologies
 |        -         |    Project 1    |
-|;----------------;|;---------------;|
+| ---------------- | --------------- |
 |    Languages     | SQL, Java, JSON |
-|------------------|-----------------|
 | Platforms & APIs | Tomcat, JDBC, DBeaver, Postman |
-|;----------------;|;---------------;|
-|      Tools       | Maven, git, github|
+|      Tools       | Maven, git, github |
