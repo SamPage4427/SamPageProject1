@@ -7,3 +7,4 @@ This application:
 - Allows employees to create a reibursement ticket given their username, an amount and a description
 - Allows managers to approve or deny the pending tickets
 
+## DBeaver Script and Diagram
